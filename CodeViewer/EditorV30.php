@@ -84,8 +84,7 @@ EditorV30.php?courseid=Webbprogrammering&sectionid=Javascript&version=2013&posit
 				include_once("basic.php");
 
 				jsvarget("courseid","courseID");
-				jsvarget("sectionid","sectionID");
-				jsvarget("position","position");
+				jsvarget("exampleno","exampleno");
 				jsvarget("version","version");
 
 				jsvarsession("kind","sessionkind");				
@@ -93,7 +92,7 @@ EditorV30.php?courseid=Webbprogrammering&sectionid=Javascript&version=2013&posit
 				
 				function AJAXService(sname,param)
 				{
-						$.ajax({url: "editorService.php", type: "POST", data: "coursename="+courseID+"&version="+version+"&sectionname="+sectionID+"&position="+position+"&opt="+sname+param, dataType: "json", success: returned});															
+						$.ajax({url: "editorService.php", type: "POST", data: "coursename="+courseID+"&version="+version+"&exampleno="+exampleno+"&opt="+sname+param, dataType: "json", success: returned});															
 				}
 
 		
